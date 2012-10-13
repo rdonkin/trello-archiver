@@ -1,6 +1,6 @@
 #trello-archiver
 
-Simple ruby scripts that you can run to manually or automatically create Excel backups of your [Trello](https://trello.com/) boards. 
+Simple ruby scripts that you can run to manually or automatically create Excel or CSV backups of your [Trello](https://trello.com/) boards. 
 
 ##Install
 - Download project
@@ -14,6 +14,7 @@ There are two main scripts you can run that are located in the `bin` directory. 
 
 ##Shoutouts
 Thanks to Jeremy Tregunna for writing the [ruby-trello library](https://github.com/jeremytregunna/ruby-trello) which made my life a lot easier.
+
 Thanks to mad_typist for initial draft of the code.
 
 ##Feedback?
