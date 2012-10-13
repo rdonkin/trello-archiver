@@ -1,17 +1,3 @@
 source :rubygems
 
-gem 'ruby-trello'
-gem 'xlsx_writer'
-gem 'pry'
-
-# testing
-group :development do
-  gem 'minitest'
-  gem 'guard-minitest'
-  gem 'guard'
-  gem 'growl'
-  gem 'guard-bundler'
-  gem 'rb-fsevent'
-  gem 'vcr'
-  gem 'fakeweb'
-end
+gemspec
