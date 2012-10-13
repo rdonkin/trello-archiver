@@ -1,0 +1,12 @@
+Changelog
+
+[0.0.2]
+Refactoring by ZPH
+Moved code into Module and Class
+Switched to xlsx_writer
+Added ability to export CSV & TSV
+
+[0.0.1]
+Initial code written by MadTypist
+Setup Trello Authentication using Ruby-Trello
+Implemented XLSX export using simple_xlsx_writer

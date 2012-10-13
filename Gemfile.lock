@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    trello-archiver (0.0.2)
+      ruby-trello
+      xlsx_writer
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -33,6 +40,7 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.3.1)
+    rake (0.9.2.2)
     rb-fsevent (0.9.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -62,7 +70,7 @@ DEPENDENCIES
   guard-minitest
   minitest
   pry
+  rake
   rb-fsevent
-  ruby-trello
+  trello-archiver!
   vcr
-  xlsx_writer

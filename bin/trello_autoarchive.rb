@@ -1,4 +1,5 @@
 # encoding: utf-8
+#!/usr/bin/env ruby
 
 require 'trello'
 require 'rubygems'
@@ -27,6 +28,6 @@ me.boards.each do |board|
   else
     filename = board.name.parameterize
     puts "Preparing to backup #{board.name}"
-    TrelloArchiver.new(:board => board, :filename => filename, :format => 'csv').createspreadsheet
+    TrelloArchiver::Archiver.new(:board => board, :filename => filename, :format => 'csv').create_backup
 	end
 end
