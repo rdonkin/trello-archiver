@@ -11,7 +11,8 @@ Simple ruby scripts that you can run to manually or automatically create Excel (
 ##Usage
 - Execute one of the scripts in the `bin` directory
 - Use the following after authenticating with Ruby-Trello
-```ruby
+
+```
 TrelloArchiver::Archiver.new(:format => 'xlsx').create_backup
 ```
 
