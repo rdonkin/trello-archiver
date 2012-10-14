@@ -60,6 +60,14 @@ include Trello::Authorization
      end
   end
 
+<<<<<<< HEAD
+=======
+
+    puts "Preparing to backup #{board.name}"
+    lists = board.lists
+
+TrelloArchiver::Archiver.new(:board => board, :filename => filename, :format => 'tsv').createspreadsheet
+>>>>>>> ad88834b230feac9d6217edf992cbf47da0ab64a
 
     puts "Preparing to backup #{board.name}"
     lists = board.lists
