@@ -6,7 +6,7 @@ module TrelloArchiver
       @options = options
       FileUtils.mkdir("archive") unless Dir.exists?("archive")
       date = DateTime.now.strftime "%Y%m%dT%H%M"
-      @filename = "archive/#{date}_#{@options[:filename]}.#{@options[:format]}"
+      @filename = "#{Dir.pwd}/#{date}_#{@options[:filename].upcase}.#{@options[:format]}"
     end
 
     def create_backup()
@@ -118,7 +118,7 @@ module TrelloArchiver
 
       # Moving file to where I want it
       require 'fileutils'
-      ::FileUtils.mv @doc.path, File.join(File.dirname(__FILE__), "..", "..", @filename)
+      ::FileUtils.mv @doc.path, @filename
 
       # Cleanup of temp dir
       @doc.cleanup
