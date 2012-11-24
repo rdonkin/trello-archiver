@@ -24,3 +24,9 @@ config.yml
 
 # working notes
 notes.txt
+
+# Ignore exported tsv, csv, xlsx
+*.csv
+*.tsv
+*.xlsx
+*.xls
