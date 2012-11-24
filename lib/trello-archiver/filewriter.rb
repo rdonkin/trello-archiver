@@ -20,6 +20,9 @@ module TrelloArchiver
   end
 
   class Prompt
+    include Trello
+    include Trello::Authorization
+
     def initialize(config)
       @config = config
     end
@@ -84,6 +87,8 @@ module TrelloArchiver
   end
 
   class Archiver
+    include Trello
+    include Trello::Authorization
     def initialize(options = {:board => "", :filename => "trello_backup", :format => 'xlsx', :col_sep => ","})
       @options = options
       FileUtils.mkdir("archive") unless Dir.exists?("archive")

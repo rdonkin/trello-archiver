@@ -3,20 +3,12 @@
 
 require 'trello'
 require 'rubygems'
-require_relative '../lib/trello-archiver'
 require 'yaml'
-
-include Trello
-include Trello::Authorization
-
-Trello::Authorization.const_set :AuthPolicy, OAuthPolicy
+require_relative '../lib/trello-archiver'
 
 CONFIG = YAML::load(File.open("config.yml")) unless defined? CONFIG
 
-credential = OAuthCredential.new CONFIG['public_key'], CONFIG['private_key']
-OAuthPolicy.consumer_credential = credential
-
-OAuthPolicy.token = OAuthCredential.new CONFIG['access_token_key'], nil
+TrelloArchiver::Authorize.new(CONFIG).authorize
 
 ignore = CONFIG['ignore']
 
